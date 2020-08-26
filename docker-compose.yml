@@ -1,0 +1,12 @@
+# docker-compose.yml example
+
+tor:
+    image: marcelmaatkamp/tor-hidden-service
+    links:
+      - murmur
+  
+  murmur:
+    image: vimagick/murmur
+    ports:
+      - "64738:64738/tcp"
+    restart: always
